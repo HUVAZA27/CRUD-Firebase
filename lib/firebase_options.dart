@@ -17,7 +17,10 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      return web;
+      throw UnsupportedError(
+        'DefaultFirebaseOptions have not been configured for web - '
+        'you can reconfigure this by running the FlutterFire CLI again.',
+      );
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -25,7 +28,10 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        return macos;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for macos - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -43,15 +49,6 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyAGzcg5lFTcdeCmyvmH2ybXtLNQXFnNWlk',
-    appId: '1:1065928452998:web:79fdfafc97946837ae1a07',
-    messagingSenderId: '1065928452998',
-    projectId: 'crud-firebase-1e5e1',
-    authDomain: 'crud-firebase-1e5e1.firebaseapp.com',
-    storageBucket: 'crud-firebase-1e5e1.appspot.com',
-  );
-
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyAdiPI5nSrRealvlVj-Kie8pof8t-rSsuA',
     appId: '1:1065928452998:android:338baf175fa8ca01ae1a07',
@@ -66,15 +63,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '1065928452998',
     projectId: 'crud-firebase-1e5e1',
     storageBucket: 'crud-firebase-1e5e1.appspot.com',
-    iosBundleId: 'com.HUVAZA.crudFirebase',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyB1O_bupRetm9rZdqjHlFTAPak0_uAb_4U',
-    appId: '1:1065928452998:ios:c2bc8b7413e7bdc3ae1a07',
-    messagingSenderId: '1065928452998',
-    projectId: 'crud-firebase-1e5e1',
-    storageBucket: 'crud-firebase-1e5e1.appspot.com',
+    androidClientId: '1065928452998-si1u57nanqip0g1tk1e1ue6kf03ckt8k.apps.googleusercontent.com',
+    iosClientId: '1065928452998-q0bqps6r7b3op3ba9696gjg140v7rlhv.apps.googleusercontent.com',
     iosBundleId: 'com.HUVAZA.crudFirebase',
   );
 }

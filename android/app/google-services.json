@@ -12,7 +12,20 @@
           "package_name": "com.HUVAZA.crud_firebase"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "1065928452998-si1u57nanqip0g1tk1e1ue6kf03ckt8k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.HUVAZA.crud_firebase",
+            "certificate_hash": "f1e989d91ad834dd491849d0492167c0d4cb1c3a"
+          }
+        },
+        {
+          "client_id": "1065928452998-itnmvvqi732p25ukt2jpa89m6uhm439m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyAdiPI5nSrRealvlVj-Kie8pof8t-rSsuA"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1065928452998-itnmvvqi732p25ukt2jpa89m6uhm439m.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1065928452998-q0bqps6r7b3op3ba9696gjg140v7rlhv.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.HUVAZA.crudFirebase"
+              }
+            }
+          ]
         }
       }
     }
